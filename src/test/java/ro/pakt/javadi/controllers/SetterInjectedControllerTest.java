@@ -3,7 +3,7 @@ package ro.pakt.javadi.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ro.pakt.javadi.services.GreetingServiceImplementation;
+import ro.pakt.javadi.services.ConstructorGreetingService;
 
 public class SetterInjectedControllerTest {
     SetterInjectedController controller;
@@ -11,7 +11,7 @@ public class SetterInjectedControllerTest {
     @BeforeEach
     void setUp(){
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImplementation());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
