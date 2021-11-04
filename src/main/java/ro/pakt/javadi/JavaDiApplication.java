@@ -8,12 +8,16 @@ import ro.pakt.javadi.controllers.ConstructorInjectedController;
 import ro.pakt.javadi.controllers.MyController;
 import ro.pakt.javadi.controllers.PropertyInjectedController;
 import ro.pakt.javadi.controllers.SetterInjectedController;
+import ro.pakt.javadi.controllers.I18nController;
 
 @SpringBootApplication
 public class JavaDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(JavaDiApplication.class, args);
+
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
